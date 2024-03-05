@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fundo fixo de tela</title>
     <style>
         body{
             height: 100vh;
@@ -12,11 +12,23 @@
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover; /*preenche todo o espaço da vh sem distorcer a imagem, porem ele corta bordas se for preciso, ajustando automaticamente para o tamanho da vh*/
+            background-attachment: fixed; /*cria vinculo do main com o fundo do body*/
+
+            /*Shothand - background
+                color > image > position > repeat > [size] > attachment
+            
+            background: black url("imagens/wallpaper002.jpg") center center [cover] no-repeat fixed;
+
+                **o size tem na documentação do w3c esta dizendo q funciona, mas na pratica nao funciona, entao nao se usa
+
+            */
+
+        
         }
 
         main{
             background-color: white;
-            width: 400px;
+            max-width: 500px; /*posiciona o conteudo para ajustar o tamanho lateral da tela*/
             padding: 10px;
             margin: auto;
             border: 1px solid darkblue;
