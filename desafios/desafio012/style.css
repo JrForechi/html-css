@@ -57,6 +57,10 @@ section{
     font-size: 3.5vw; /*3.5% do tamanho da largura da tela*/
 }
 
+section > p {
+    padding-bottom: 2em; /*criou o espaço entre os paragrafos*/
+}
+
 section.normal{ /*section da class normal*/
     background-color: white;
     color: rgb(87, 83, 83);
