@@ -1,15 +1,22 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+
+:root{
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2:"Passion One", sans-serif;
+    --fonte3:"Sriracha", cursive;
+}
 
 *{
     margin: 0px;
-    padding: 0px;
+    padding: 0px;    
 }
 
 html, body{
     min-height: 100vh; /*tamanho minimo do corpo*/
     background-color: darkgray;
+    font-family: var(--fonte1);
 }
 
 header{
@@ -22,6 +29,8 @@ header > h1 { /*o H1 do header*/
     padding-top: 50px; /*padding que fica acima do texto Cordel Moderno do cabeçalho*/
     /*text-transform: uppercase; para deixar tudo em maiusculo*/
     font-variant: small-caps; /*deixa em tudo maiuculo, podem as primeiras letras ficam maiores*/
+    font-family: var(--fonte2);
+    font-size: 10vw; /*10% da largura da tela*/
 }
 
 header > p {
@@ -44,6 +53,8 @@ section{
     padding-bottom: 10vh;
     line-height: 2em; /*espaçamento entre as linhas*/
     padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 3.5vw; /*3.5% do tamanho da largura da tela*/
 }
 
 section.normal{ /*section da class normal*/
@@ -57,8 +68,10 @@ section.imagem{
 }
 
 section.imagem > p {
-    width: 400px;
+    display: inline-block; /*cria a caixa que se adapta ao tamanho do conteudo*/
     background-color: rgba(7, 7, 7, 0.678);
+    padding: 5px;
+    border-radius: 10px;
 }
 
 footer{
